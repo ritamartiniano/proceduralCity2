@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class CityBuilder : MonoBehaviour
 {
+    
     public GameObject[] buildings;
     public int mapWidth = 20;
     public int mapHeight = 20;
     int buildingsSpacing = 5;
-    // Start is called before the first frame update
+    
     void Start()
     {
         float seed = Random.Range(0,100);
