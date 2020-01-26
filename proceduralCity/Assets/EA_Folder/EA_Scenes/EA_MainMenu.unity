@@ -835,8 +835,8 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "Camera 1 \nWASD and Left-Click to move around \nQ, E and Right-Click to
-    rotate \nF, R and Scroll to zoom \n\nV to switch between cameras\n\nCamera 2 \nWASD
-    to move around "
+    rotate \nF, R and Scroll to zoom \nLeft-Shift to move faster\n\nV to switch between
+    cameras\n\nCamera 2 \nWASD to move around "
 --- !u!222 &1887894215
 CanvasRenderer:
   m_ObjectHideFlags: 0
