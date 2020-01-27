@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/GM_Folder/GM_Scene/GM_00.unity
+- path: Assets/Rita Folder/Rita's Scene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
