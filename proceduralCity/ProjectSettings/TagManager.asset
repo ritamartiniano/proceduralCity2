@@ -9,6 +9,8 @@ TagManager:
   - Instance2
   - Instance3
   - Instance4
+  - RoadTile
+  - PerpTile
   layers:
   - Default
   - TransparentFX
