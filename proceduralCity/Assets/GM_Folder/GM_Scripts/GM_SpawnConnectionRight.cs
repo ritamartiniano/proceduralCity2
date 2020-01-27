@@ -23,7 +23,7 @@ public class GM_SpawnConnectionRight : MonoBehaviour
 
     private bool bl_IsConnectedDown = false;
 
-    private bool bl_IsConnectedLeft = false;
+   // private bool bl_IsConnectedLeft = false;
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +51,7 @@ public class GM_SpawnConnectionRight : MonoBehaviour
             if (c_RoadsRight[0].gameObject.CompareTag("RoadTile") || c_RoadsRight[1].gameObject.CompareTag("RoadTile") || c_RoadsRight[0].gameObject.CompareTag("PerpTile") || c_RoadsRight[1].gameObject.CompareTag("PerpTile"))
             {
                 float fl_Distance = Vector3.Distance(transform.position, c_RoadsRight[0].gameObject.transform.position);
-                Vector3 v3_Position = new Vector3(transform.position.x + fl_Distance / 2, -0.003f, transform.position.z);
+                Vector3 v3_Position = new Vector3(transform.position.x + fl_Distance / 2 - 1.5f, -0.003f, transform.position.z);
                 Instantiate(go_RoadConnection, v3_Position, Quaternion.identity);
                 bl_IsConnectedRight = true;
             }
@@ -73,7 +73,7 @@ public class GM_SpawnConnectionRight : MonoBehaviour
         //        }
         //    }
         //}
-
+        /**
         else if (bl_IsConnectedRight == true)
         {
             Collider[] c_RoadsLeft = Physics.OverlapSphere(transform.position + new Vector3(-10, 0, 0), 1f);
@@ -86,7 +86,7 @@ public class GM_SpawnConnectionRight : MonoBehaviour
                 }
             }
         }
-
+       **/
         //Down
         Collider[] c_PerpRoadsDown = Physics.OverlapSphere(transform.position + new Vector3(0, 0, -10), 1f);
 
@@ -131,7 +131,7 @@ public class GM_SpawnConnectionRight : MonoBehaviour
                 {
                     if (!c_RoadsTopLeft[0].gameObject.CompareTag("PerpTile") || !c_RoadsTopLeft[1].gameObject.CompareTag("PerpTile"))
                     {
-                        if (!bl_IsConnectedUp && !bl_IsConnectedLeft)
+                        if (!bl_IsConnectedUp)
                         {
                             Vector3 v3_Position = new Vector3(transform.position.x - 5, -0.001f, transform.position.z + 5);
                             Instantiate(go_RoadConnection, v3_Position, q_Rotation30);  

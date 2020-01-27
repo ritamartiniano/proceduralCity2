@@ -14,6 +14,7 @@ public class CityBuilder1 : MonoBehaviour
     public GameObject stoneGround;
     int buildingsSpacing = 10;
     int[,] mapGrid;
+    public GameObject tree, bench;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,27 +64,39 @@ public class CityBuilder1 : MonoBehaviour
                     Instantiate(xStreets, pos, xStreets.transform.rotation);
                 else if (result < 0)
                     Instantiate(zstreets, pos, zstreets.transform.rotation);
-                else if(result < 2)
-                    Instantiate(buildings[0], pos, Quaternion.identity);
+                else if (result < 2)
+                {
+                    GameObject go = Instantiate(buildings[0], pos, Quaternion.identity);
+                    Vector3 spawnPosition = go.transform.position + new Vector3(Random.Range(-go.transform.localScale.x/2, go.transform.localScale.x/2),0, (Random.Range(-go.transform.localScale.z / 2, go.transform.localScale.z/ 2)));
+                    float pickPrefabforPark = Random.Range(0, 2);
+                    if (pickPrefabforPark == 1 )
+                    {
+                        Instantiate(bench, spawnPosition, Quaternion.identity);
+                    }
+                    else if (pickPrefabforPark == 2 || pickPrefabforPark == 0)
+                    {
+                        Instantiate(tree, spawnPosition, Quaternion.identity);
+                    }
+                }
                 else if (result < 4)
                 {
                     Instantiate(buildings[1], pos, Quaternion.identity);
-                    Instantiate(stoneGround, pos, Quaternion.identity);
+
                 }
                 else if (result < 6)
                 {
                     Instantiate(buildings[2], pos, Quaternion.identity);
-                    Instantiate(stoneGround, pos, Quaternion.identity);
+                   
                 }
                 else if (result < 8)
                 {
                     Instantiate(buildings[3], pos, Quaternion.identity);
-                    Instantiate(stoneGround, pos, Quaternion.identity);
+                  
                 }
                 else if (result < 10)
-                { 
+                {
                     Instantiate(buildings[4], pos, Quaternion.Euler(0, -90, 0));
-                    Instantiate(stoneGround, pos, Quaternion.identity);
+                  
                 }
             }
         }

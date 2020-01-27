@@ -31,6 +31,7 @@ public class GM_CityGeneration : MonoBehaviour
     private Vector3 v3_Rotation180;
 
     private Quaternion q_Rotation180;
+    public GameObject tree, bench;
 
     // Start is called before the first frame update
     void Start()
@@ -95,6 +96,7 @@ public class GM_CityGeneration : MonoBehaviour
                 {
                     v3_Rotation180 = new Vector3(0, Random.Range(180, -180), 0);
                     q_Rotation180.eulerAngles = v3_Rotation180;
+                   
 
                     GameObject go_Temp = Instantiate(buildings[0], pos, q_Rotation180);
 
@@ -124,6 +126,7 @@ public class GM_CityGeneration : MonoBehaviour
                     q_Rotation180.eulerAngles = v3_Rotation180;
 
                     GameObject go_Temp = Instantiate(buildings[1], pos, q_Rotation180);
+                   
 
                     //66.7% ROADS
                     //int in_Temp = Random.Range(0, 2);
@@ -152,6 +155,7 @@ public class GM_CityGeneration : MonoBehaviour
                     q_Rotation180.eulerAngles = v3_Rotation180;
 
                     GameObject go_Temp = Instantiate(buildings[2], pos, q_Rotation180);
+                 
 
                     //66.7% ROADS
                     //int in_Temp = Random.Range(0, 2);
@@ -179,6 +183,8 @@ public class GM_CityGeneration : MonoBehaviour
                     q_Rotation180.eulerAngles = v3_Rotation180;
 
                     GameObject go_Temp = Instantiate(buildings[3], pos, q_Rotation180);
+                    
+                    
 
                     //66.7% ROADS
                     //int in_Temp = Random.Range(0, 2);
@@ -205,7 +211,19 @@ public class GM_CityGeneration : MonoBehaviour
                     v3_Rotation180 = new Vector3(0, Random.Range(180, -180), 0);
                     q_Rotation180.eulerAngles = v3_Rotation180;
 
-                    GameObject go_Temp = Instantiate(buildings[4], pos, q_Rotation180);
+                    GameObject go_Temp = Instantiate(buildings[4], pos, Quaternion.identity);
+                    Instantiate(bench, pos, Quaternion.identity);
+
+                    Vector3 spawnPosition = go_Temp.transform.position + new Vector3(Random.Range(-go_Temp.transform.localScale.x / 2, go_Temp.transform.localScale.x / 2), 0, (Random.Range(-go_Temp.transform.localScale.z / 2, go_Temp.transform.localScale.z / 2)));
+                    float pickPrefabforPark = Random.Range(0, 2);
+                    if (pickPrefabforPark == 1)
+                    {
+                        Instantiate(bench, spawnPosition, Quaternion.identity);
+                    }
+                    else if (pickPrefabforPark == 2 || pickPrefabforPark == 0)
+                    {
+                        Instantiate(tree, spawnPosition, Quaternion.identity);
+                    }
 
                     //66.7% ROADS
                     //int in_Temp = Random.Range(0, 2);
@@ -225,6 +243,7 @@ public class GM_CityGeneration : MonoBehaviour
                         Instantiate(go_CubeRoad, pos, Quaternion.identity);
                         StartCoroutine("SpawnRoad", pos);
                     }
+
                 }
             }
         }
