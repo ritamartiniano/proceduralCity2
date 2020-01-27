@@ -57,22 +57,22 @@ public class GM_SpawnConnectionRight : MonoBehaviour
             }
         }
 
-        //Left
-        if (bl_IsConnectedRight == false)
-        {
-            Collider[] c_RoadsLeft = Physics.OverlapSphere(transform.position + new Vector3(-10, 0, 0), 1f);
+        //Left - This has been moved to perpendicular roads.
+        //if (bl_IsConnectedRight == false)
+        //{
+        //    Collider[] c_RoadsLeft = Physics.OverlapSphere(transform.position + new Vector3(-10, 0, 0), 1f);
 
-            if (c_RoadsLeft.Length >= 2)
-            {
-                if (c_RoadsLeft[0].gameObject.CompareTag("RoadTile") || c_RoadsLeft[0].gameObject.CompareTag("PerpTile") || c_RoadsLeft[1].gameObject.CompareTag("RoadTile") || c_RoadsLeft[1].gameObject.CompareTag("PerpTile"))
-                {
-                    float fl_Distance = Vector3.Distance(transform.position, c_RoadsLeft[0].gameObject.transform.position);
-                    Vector3 v3_Position = new Vector3(transform.position.x - fl_Distance / 2, 0, transform.position.z);
-                    bl_IsConnectedLeft = true;
-                    Instantiate(go_RoadConnection, v3_Position, Quaternion.identity);
-                }
-            }
-        }
+        //    if (c_RoadsLeft.Length >= 2)
+        //    {
+        //        if (c_RoadsLeft[0].gameObject.CompareTag("RoadTile") || c_RoadsLeft[0].gameObject.CompareTag("PerpTile") || c_RoadsLeft[1].gameObject.CompareTag("RoadTile") || c_RoadsLeft[1].gameObject.CompareTag("PerpTile"))
+        //        {//THIS ONE BUG TO THE RIGHT
+        //            float fl_Distance = Vector3.Distance(transform.position, c_RoadsLeft[0].gameObject.transform.position);
+        //            Vector3 v3_Position = new Vector3(transform.position.x - fl_Distance / 2, 0, transform.position.z);
+        //            bl_IsConnectedLeft = true;
+        //            Instantiate(go_RoadConnection, v3_Position, Quaternion.identity);
+        //        }
+        //    }
+        //}
 
         else if (bl_IsConnectedRight == true)
         {
