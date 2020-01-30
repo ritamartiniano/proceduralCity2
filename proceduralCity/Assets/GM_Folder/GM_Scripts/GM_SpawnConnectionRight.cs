@@ -23,9 +23,6 @@ public class GM_SpawnConnectionRight : MonoBehaviour
 
     private bool bl_IsConnectedDown = false;
 
-    [SerializeField]
-    private LayerMask lm_Untagged;
-
    // private bool bl_IsConnectedLeft = false;
 
     // Start is called before the first frame update
@@ -47,7 +44,7 @@ public class GM_SpawnConnectionRight : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         //Right
-        Collider[] c_RoadsRight = Physics.OverlapSphere(transform.position + new Vector3(10, 0, 0), 1f, lm_Untagged);
+        Collider[] c_RoadsRight = Physics.OverlapSphere(transform.position + new Vector3(10, 0, 0), 1f);
 
         if (c_RoadsRight.Length >= 2)
         {
@@ -91,7 +88,7 @@ public class GM_SpawnConnectionRight : MonoBehaviour
         }
        **/
         //Down
-        Collider[] c_PerpRoadsDown = Physics.OverlapSphere(transform.position + new Vector3(0, 0, -10), 1f, lm_Untagged);
+        Collider[] c_PerpRoadsDown = Physics.OverlapSphere(transform.position + new Vector3(0, 0, -10), 1f);
 
         if (c_PerpRoadsDown.Length >= 1)
         {
@@ -105,7 +102,7 @@ public class GM_SpawnConnectionRight : MonoBehaviour
         }
 
         //Top
-        Collider[] c_PerpRoadsAbove = Physics.OverlapSphere(transform.position + new Vector3(0, 0, 10), 1f, lm_Untagged);
+        Collider[] c_PerpRoadsAbove = Physics.OverlapSphere(transform.position + new Vector3(0, 0, 10), 1f);
 
         if (c_PerpRoadsAbove.Length >= 1)
         {
@@ -124,7 +121,7 @@ public class GM_SpawnConnectionRight : MonoBehaviour
         }
 
         //Top Left
-        Collider[] c_RoadsTopLeft = Physics.OverlapSphere(transform.position + new Vector3(-10, 0, 10), 1f, lm_Untagged);
+        Collider[] c_RoadsTopLeft = Physics.OverlapSphere(transform.position + new Vector3(-10, 0, 10), 1f);
 
         if (c_RoadsTopLeft.Length == 2)
         {
@@ -145,7 +142,7 @@ public class GM_SpawnConnectionRight : MonoBehaviour
         }
 
         //Top Right
-        Collider[] c_RoadsTopRight = Physics.OverlapSphere(transform.position + new Vector3(10, 0, 10), 1f, lm_Untagged);
+        Collider[] c_RoadsTopRight = Physics.OverlapSphere(transform.position + new Vector3(10, 0, 10), 1f);
 
         if (c_RoadsTopRight.Length == 2)
         {
