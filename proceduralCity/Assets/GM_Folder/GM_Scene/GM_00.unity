@@ -528,7 +528,7 @@ MonoBehaviour:
     type: 3}
   go_PerpRoad: {fileID: 6023527027422351712, guid: b9202b41eb4d79e4a92a9288fbc0994e,
     type: 3}
-  trees: {fileID: 1276862051916332, guid: 1be61187b5d765449be824463642cb0f, type: 3}
+  tree: {fileID: 1276862051916332, guid: 1be61187b5d765449be824463642cb0f, type: 3}
   bench: {fileID: 1228088659953116, guid: 80c5916b9606ce646be16611d9a06d13, type: 3}
 --- !u!4 &151963598
 Transform:
