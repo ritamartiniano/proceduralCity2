@@ -102,9 +102,9 @@ public class GM_CityGeneration : MonoBehaviour
                     GameObject go_Temp = Instantiate(buildings[0], pos, Quaternion.identity);
 
                     // Rita
-                    Instantiate(bench, pos + new Vector3(Random.Range(0, -0.5f), 0, Random.Range(0, -1f)), q_Rotation180);
+                    Instantiate(bench, pos + new Vector3(Random.Range(-0.5f, -1.5f), 0, Random.Range(-0.5f, -1.5f)), q_Rotation180);
 
-                    Instantiate(tree, pos + new Vector3(Random.Range(0, -0.5f), 0, Random.Range(0, -1f)), q_Rotation180);
+                    Instantiate(tree, pos + new Vector3(Random.Range(0.5f, 1.5f), 0, Random.Range(0.5f, 1.5f)), q_Rotation180);
 
                     //66.7% ROADS
                     //int in_Temp = Random.Range(0, 2);
@@ -220,9 +220,9 @@ public class GM_CityGeneration : MonoBehaviour
                     GameObject go_Temp = Instantiate(buildings[4], pos, Quaternion.identity);
 
                     // Rita
-                    Instantiate(bench, pos + new Vector3(Random.Range(0, -0.5f), 0, Random.Range(0, -1f)), q_Rotation180);
+                    Instantiate(bench, pos + new Vector3(Random.Range(-0.5f, -1.5f), 0, Random.Range(-0.5f, -1.5f)), q_Rotation180);
 
-                    Instantiate(tree, pos + new Vector3(Random.Range(0, -0.5f), 0, Random.Range(0, -1f)), q_Rotation180);
+                    Instantiate(tree, pos + new Vector3(Random.Range(0.5f, 1.5f), 0, Random.Range(0.5f, 1.5f)), q_Rotation180);
 
                     //66.7% ROADS
                     //int in_Temp = Random.Range(0, 2);
