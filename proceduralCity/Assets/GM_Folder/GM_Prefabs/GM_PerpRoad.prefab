@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4769815226523858448}
   - component: {fileID: 4059513792197989618}
   - component: {fileID: 7237932101999944398}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pavement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 6013485659491216384}
   - component: {fileID: 3208365958157848217}
   - component: {fileID: 1253537280100255235}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: street
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 6017461383496398336}
   - component: {fileID: 4054888098303007084}
   - component: {fileID: 5473740321620268833}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GM_PerpRoad
   m_TagString: PerpTile
   m_Icon: {fileID: 0}

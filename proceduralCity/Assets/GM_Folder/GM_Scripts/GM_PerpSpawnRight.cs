@@ -2,17 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class will spawn connections to the right of the specific perpendicular road.
+/// </summary>
 public class GM_PerpSpawnRight : MonoBehaviour
 {
+    [Tooltip("The road connection tile prefab.")]
     [SerializeField]
     private GameObject go_RoadConnection;
 
-    // Start is called before the first frame update
+    // Start is called before the first frame update. It starts the coroutine.
     void Start()
     {
         StartCoroutine("SpawnRight");
     }
 
+    /// <summary>
+    /// This coroutine checks if there is a road tile to its left and connects with it.
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator SpawnRight()
     {
         yield return new WaitForSeconds(1);

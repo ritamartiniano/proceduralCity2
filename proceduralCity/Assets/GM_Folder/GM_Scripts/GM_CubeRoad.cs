@@ -2,6 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 
+/// <summary>
+/// This class destroys road tiles.
+/// </summary>
 public class GM_CubeRoad : MonoBehaviour
 {
     private void OnTriggerStay(Collider other)

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3882725585601089741}
   - component: {fileID: 6260874169388931159}
   - component: {fileID: 1525630433127304731}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pavement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 6045461977350363618}
   - component: {fileID: 6036568385838490094}
   - component: {fileID: 6013485659491216384}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: street
   m_TagString: RoadTile
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 6017461383496398336}
   - component: {fileID: 4549489416724516233}
   - component: {fileID: 5305272261732716975}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GM_RoadTile
   m_TagString: RoadTile
   m_Icon: {fileID: 0}
@@ -234,9 +234,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   go_RoadConnection: {fileID: 6023527027422351712, guid: c894eeb27fc62b340ad6643e1f839d93,
     type: 3}
-  lm_Untagged:
+  lm_Road:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 512
 --- !u!65 &5305272261732716975
 BoxCollider:
   m_ObjectHideFlags: 0
